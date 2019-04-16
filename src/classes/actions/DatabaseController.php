@@ -10,7 +10,7 @@ class DatabaseController extends Controller
 
     public function createTables()
     {
-        $migration_path = (explode('vendor', __DIR__))[1];
+        $migration_path = explode('vendor', __DIR__, 2)[1];
         echo "Setting up database for MiniOrange SAML SP for Laravel...<br>";
         try {
             Artisan::call('migrate:refresh', array(
