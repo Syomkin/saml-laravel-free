@@ -19,10 +19,11 @@ final class SSO
 
     public function __construct()
     {
+        //exit("here2");
         $pluginSettings = PluginSettings::getPluginSettings();
         if (array_key_exists('SAMLResponse', $_REQUEST) && ! empty($_REQUEST['SAMLResponse'])) {
             try {
-
+                //exit("here1");
                 $relayStateUrl = array_key_exists('RelayState', $_REQUEST) ? $_REQUEST['RelayState'] : '/';
                 $samlResponseObj = ReadResponseAction::execute(); // read the samlResponse from IDP
                 $responseAction = new ProcessResponseAction($samlResponseObj);

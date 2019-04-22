@@ -58,6 +58,7 @@ class AuthnRequest
                                 <saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">'.$this->issuer.'</saml:Issuer>
                                 <samlp:NameIDPolicy AllowCreate="true" Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"/>
                             </samlp:AuthnRequest>';
+                            //var_dump($this->acsUrl, $this->destination, $this->issuer);exit;
         return $requestXmlStr;
     }
 

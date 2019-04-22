@@ -25,7 +25,7 @@ class ssoServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-         $this->loadMigrationsFrom(__DIR__.'/../src/2014_10_12_100000_create_miniorange_tables.php');
+         $this->loadMigrationsFrom(__DIR__.'/../src/classes/actions');
          $this->loadRoutesFrom(__DIR__.'/../src/routes.php');
          $this->loadViewsFrom(__DIR__.'/../src/','newidea');
     }

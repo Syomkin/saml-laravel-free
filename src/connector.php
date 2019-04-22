@@ -298,8 +298,9 @@ function mo_saml_show_error_message()
 {
     if (isset($_SESSION['show_success_msg']))
         unset($_SESSION['show_success_msg']);
+    if(!isset($_SESSION)){
     session_id('connector');
-    session_start();
+    session_start();}
     $_SESSION['show_error_msg'] = 1;
 }
 
